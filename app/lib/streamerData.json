@@ -1,0 +1,234 @@
+[
+	{
+		"twitchHandle": "blackjack_kent",
+		"bio": "blackjack_kent spends her streams taking on a wide variety of games from shooter to point-and-click, story mode to skill check. Come by any of her streams for a chill time, lots of chat interaction, and a ton of laughs.",
+		"twitter": "blackjackkent",
+		"discord": "https://discord.gg/k4gDad5",
+		"streams": [
+			{
+				"refName": "bjk Friday",
+				"seedDate": "2021-01-16 03:00:00+00",
+				"length": 3
+			},
+			{
+				"refName": "bjk Monday",
+				"seedDate": "2021-01-12 00:00:00+00",
+				"length": 2
+			}
+		]
+	},
+	{
+		"twitchHandle": "wupuga",
+		"bio": "",
+		"twitter": "wupuga",
+		"discord": "https://discord.gg/a6zc4N7CyA",
+		"streams": [
+			{
+				"refName": "wupuga Thursday",
+				"seedDate": "2021-01-15 01:30:00+00",
+				"length": 3
+			},
+			{
+				"refName": "wupuga Sunday",
+				"seedDate": "2021-01-17 19:30:00+00",
+				"length": 5
+			}
+		]
+	},
+	{
+		"twitchHandle": "tacosdegatos",
+		"bio": "TacosDeGatos is a variety streamer seen playing everything from Pokemon to Halo. Sometimes he plays really well and inspires others with his skills, sometimes he doesn't. His viewers come for the soothing voice and witty humor, but stay for the chance of seeing his puppy.",
+		"twitter": "tacosdegatos",
+		"discord": "https://discord.gg/C2JSrgA",
+		"streams": [
+			{
+				"refName": "tacosdegatos Tuesday",
+				"seedDate": "2021-02-17 01:00:00+00",
+				"length": 3
+			},
+			{
+				"refName": "tacosdegatos Friday",
+				"seedDate": "2021-02-13 04:00:00+00",
+				"length": 5
+			}
+		]
+	},
+	{
+		"twitchHandle": "msunicorn",
+		"bio": "",
+		"twitter": "msustreams",
+		"streams": []
+	},
+	{
+		"twitchHandle": "procyonnova",
+		"bio": "",
+		"twitter": "procyonnova",
+		"streams": []
+	},
+	{
+		"twitchHandle": "grim___creeper",
+		"bio": "I'm GrimCreeper (grim___creeper, let's hear it for the triple underscore!) and you're likely to find me either chilling out on a variety of single player games or getting loud during After Dark. I grew up a Nintendo kid so I assure you, I'm just as confused about the amount of Sonic that continues to suffuse the stream but he's definitely going to come up. I may be good at some of the games that are played or that may be something I tell myself so I can sleep at night, but I'm sure going to try and beat them. ",
+		"twitter": "grim___creeper",
+		"discord": "https://discord.gg/qSVKDcVDv3",
+		"streams": [
+			{
+				"refName": "grim Wednesday",
+				"seedDate": "2022-01-13 01:30:00+00",
+				"length": 3
+			},
+			{
+				"refName": "grim Friday",
+				"seedDate": "2021-02-13 04:00:00+00",
+				"length": 3
+			}
+		]
+	},
+	{
+		"twitchHandle": "DragonC0mmander",
+		"bio": "Hiyo, just your friendly cave dwelling Trans Dragon here. I'm a 30 something shaken-not-stirred mix of ADHD, anxiety, depression, a growing collection of OCs, dad jokes, and puns! I play a lot of rpgs and provide a chill and accepting environment where it's more about the journey and the friends we make than the destination. Come hang out, bring snacks, and remember to stay hydrated!",
+		"twitter": "DragonC0mmander",
+		"discord": "https://discord.gg/cvPc7Ps",
+		"streams": [
+			{
+				"refName": "logan Monday",
+				"seedDate": "2023-05-29 23:00:00+00",
+				"length": 8
+			},
+			{
+				"refName": "logan Thursday",
+				"seedDate": "2023-05-25 23:00:00+00",
+				"length": 8
+			},
+			{
+				"refName": "logan Saturday",
+				"seedDate": "2023-05-27 23:00:00+00",
+				"length": 8
+			}
+		]
+	},
+	{
+		"twitchHandle": "tolitir",
+		"bio": "Life can be a swirl so take the Tolitir stream for a spin sometime. Fighting games and Roguelikes are stream staples, but I want to celebrate all the different ways we play so expect to see everything from AAA to Indie games on the channel too.",
+		"twitter": "t0litir",
+		"discord": "https://discord.gg/xuRuFDg",
+		"streams": [
+			{
+				"refName": "tolitir Monday",
+				"seedDate": "2022-02-01 06:00:00+00",
+				"length": 2
+			},
+			{
+				"refName": "tolitir Tuesday",
+				"seedDate": "2022-02-02 06:00:00+00",
+				"length": 2
+			},
+			{
+				"refName": "tolitir Wednesday",
+				"seedDate": "2022-02-03 06:00:00+00",
+				"length": 2
+			},
+			{
+				"refName": "tolitir Thursday",
+				"seedDate": "2022-02-04 06:00:00+00",
+				"length": 2
+			},
+			{
+				"refName": "tolitir Friday",
+				"seedDate": "2022-02-05 01:00:00+00",
+				"length": 2
+			},
+			{
+				"refName": "tolitir Saturday",
+				"seedDate": "2022-02-06 01:00:00+00",
+				"length": 2
+			}
+		]
+	},
+	{
+		"twitchHandle": "ki2life",
+		"bio": "Hi, I'm Ki! (Pronounced like \"Key\"!) I'm a pink-haired kitsune who streams a variety of fun games!  I adore both the Sonic and Kingdom Hearts franchises. I'm so excited to meet you! Come on in and let's unlock a good time! I'll even bring some friends along!",
+		"discord": "https://discord.gg/Jw23zJj",
+		"streams": [
+			{
+				"refName": "ki Tuesday",
+				"seedDate": "2022-02-09 01:00:00+00",
+				"length": 4
+			},
+			{
+				"refName": "ki thursday",
+				"seedDate": "2022-02-11 01:00:00+00",
+				"length": 4
+			},
+			{
+				"refName": "ki friday",
+				"seedDate": "2022-02-12 01:00:00+00",
+				"length": 4
+			}
+		]
+	},
+	{
+		"twitchHandle": "Siur__",
+		"bio": "Ello! I am Siúr (Si-ur) and I'm a literature addicted cook-acholic with some serious game and music OCD on the side.  My favorite movie is Labyrinth and in another world I married the Goblin King.  I like all things strange and bizarre and even maybe a few gross things.",
+		"instagram": "SiurPairc",
+		"discord": "https://discord.gg/p5gXt68wfV",
+		"streams": [
+			{
+				"refName": "siur Monday",
+				"seedDate": "2022-08-22 22:00:00+00",
+				"length": 2
+			},
+			{
+				"refName": "siur Tuesday",
+				"seedDate": "2022-08-23 22:00:00+00",
+				"length": 2
+			},
+			{
+				"refName": "siur Wednesday",
+				"seedDate": "2022-08-24 22:00:00+00",
+				"length": 2
+			},
+			{
+				"refName": "siur Thursday",
+				"seedDate": "2022-08-25 22:00:00+00",
+				"length": 2
+			},
+			{
+				"refName": "siur Friday",
+				"seedDate": "2022-08-26 22:00:00+00",
+				"length": 2
+			}
+		]
+	},
+	{
+		"twitchHandle": "theloungingpotato",
+		"bio": "If you like some dude who is awful at video games and makes an obscene amount of dick jokes, my stream is the one for you. What I lack in skill, I make up for in enthusiasm by exclaiming incredulously at the screen when things go awry. I'm here for a good time, not a long time.",
+		"twitter": "LoungingPotato",
+		"streams": [
+			{
+				"refName": "potato Tuesday",
+				"seedDate": "2022-12-28 01:00:00+00",
+				"length": 4
+			},
+			{
+				"refName": "potato Wednesday",
+				"seedDate": "2022-12-29 01:00:00+00",
+				"length": 4
+			},
+			{
+				"refName": "potato Thursday",
+				"seedDate": "2022-12-30 01:00:00+00",
+				"length": 4
+			},
+			{
+				"refName": "potato Saturday",
+				"seedDate": "2023-01-01 01:00:00+00",
+				"length": 4
+			},
+			{
+				"refName": "potato Sunday",
+				"seedDate": "2023-01-02 01:00:00+00",
+				"length": 4
+			}
+		]
+	}
+]

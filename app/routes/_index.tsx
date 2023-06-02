@@ -1,4 +1,8 @@
-import type { V2_MetaFunction } from "@remix-run/node";
+import type { LoaderArgs, V2_MetaFunction } from "@remix-run/node";
+import { useLoaderData } from "@remix-run/react";
+import { fetchCurrentlyLiveStreamers } from "~/lib/streamers.server";
+import { json } from "@remix-run/node";
+import { FaExternalLinkAlt } from "react-icons/fa";
 
 export const meta: V2_MetaFunction = () => {
 	return [
@@ -7,7 +11,27 @@ export const meta: V2_MetaFunction = () => {
 	];
 };
 
+export async function loader({ request }: LoaderArgs) {
+	return json({ liveStreamers: await fetchCurrentlyLiveStreamers() });
+}
+
 export default function Index() {
+	const { liveStreamers } = useLoaderData<typeof loader>();
+	let streamerDisplay: JSX.Element[] = [];
+	if (liveStreamers) {
+		streamerDisplay = liveStreamers.map((s) => (
+			<h4 key={s}>
+				<a
+					target="_blank"
+					rel="noopener noreferrer"
+					href={`http://www.twitch.tv/${s}`}
+					className="bg-secondary text-white text-center block p-4 mb-3 rounded-md text-lg hover:bg-primary"
+				>
+					{s} <FaExternalLinkAlt className="ml-2 inline" />
+				</a>
+			</h4>
+		));
+	}
 	return (
 		<div className="flex">
 			<div className="flex-1 pr-12 py-10 text-slate-800">
@@ -35,7 +59,15 @@ export default function Index() {
 				<h3 className="text-2xl text-secondary font-bold text-center mb-4">
 					Currently Live
 				</h3>
-				<hr />
+				<hr className="mb-4" />
+				{liveStreamers && liveStreamers.length > 0 && (
+					<div>{streamerDisplay}</div>
+				)}
+				{!liveStreamers && (
+					<p>
+						No Campfire streamers are currently live! Please check back soon.
+					</p>
+				)}
 			</div>
 		</div>
 	);
