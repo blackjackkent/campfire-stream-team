@@ -18,8 +18,7 @@ const ScheduleDay = ({ streams, dayId }: ScheduleDayProps) => {
 	const timezoneName = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
 	return (
-		<div className="border border-solid border-gray-400 mb-8 p-5 text-slate-800">
-			<h2 className="text-4xl font-bold mb-4">Today's Schedule</h2>
+		<div className="mb-8 p-5 text-slate-800">
 			<h3 className="text-2xl font-bold mb-2 text-center border-b border-b-solid border-b-slate-800">
 				{dayName}
 			</h3>
@@ -29,8 +28,11 @@ const ScheduleDay = ({ streams, dayId }: ScheduleDayProps) => {
 					No streams scheduled for this day.
 				</p>
 			) : (
-				streams.map((s) => (
-					<ScheduleStream key={s.twitchHandle} scheduleItem={s} />
+				streams.map((s, index) => (
+					<ScheduleStream
+						key={s.twitchHandle + dayId + index}
+						scheduleItem={s}
+					/>
 				))
 			)}
 			{streams.length > 0 && (

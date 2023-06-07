@@ -28,6 +28,10 @@ export const links: LinksFunction = () => [
 		href: "https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap",
 	},
 	{ rel: "stylesheet", href: stylesheet },
+	{
+		rel: "stylesheet",
+		href: "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css",
+	},
 ];
 
 export default function App() {

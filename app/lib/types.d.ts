@@ -17,3 +17,7 @@ export type ScheduleItem = {
 	twitchHandle: string;
 	stream: Stream;
 };
+
+export type Schedule = {
+	[day: string]: ScheduleItem[];
+};

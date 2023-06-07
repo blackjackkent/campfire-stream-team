@@ -1,7 +1,7 @@
 import streamData from "./streamerData.json";
 import { ApiClient } from "twitch";
 import { ClientCredentialsAuthProvider } from "twitch-auth";
-import type { ScheduleItem, Streamer } from "./types";
+import type { Schedule, ScheduleItem, Streamer } from "./types";
 import { sortScheduleItems } from "./utils";
 
 const clientId = process.env.TWITCH_CLIENT_ID || "";
@@ -47,4 +47,27 @@ export const fetchTodaysStreams = (dayId: number) => {
 		}
 	});
 	return todaysStreams.sort(sortScheduleItems);
+};
+
+export const fetchSchedule = () => {
+	const schedule: Schedule = {
+		0: [],
+		1: [],
+		2: [],
+		3: [],
+		4: [],
+		5: [],
+		6: [],
+	};
+	data.forEach((s) => {
+		s.streams?.forEach((stream) => {
+			const localDate = new Date(stream.seedDate);
+			const dayId = localDate.getDay();
+			schedule[dayId].push({
+				twitchHandle: s.twitchHandle,
+				stream,
+			});
+		});
+	});
+	return schedule;
 };

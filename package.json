@@ -19,6 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
+    "swiper": "^9.3.2",
     "twitch": "^4.6.7",
     "twitch-auth": "^4.6.7"
   },

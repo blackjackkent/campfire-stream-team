@@ -83,7 +83,10 @@ export default function Index() {
 				</div>
 			</div>
 			<div>
-				<ScheduleDay streams={todaysStreams} dayId={todayDayId} />
+				<h2 className="text-4xl font-bold mb-4">Today's Schedule</h2>
+				<div className="border border-solid border-gray-400 mb-10">
+					<ScheduleDay streams={todaysStreams} dayId={todayDayId} />
+				</div>
 			</div>
 		</>
 	);

@@ -1,16 +1,21 @@
+import { Link } from "@remix-run/react";
+
 const Footer = () => {
 	return (
 		<section className="bg-primaryDeep text-center py-4 text-white">
 			<h6>
 				&copy; Copyright {new Date().getFullYear()}{" "}
-				<span className="text-secondaryLight hover:text-white">
+				<Link
+					to="/"
+					className="text-secondaryLight hover:text-white cursor-pointer"
+				>
 					Campfire Stream Team
-				</span>{" "}
+				</Link>{" "}
 				| Developed by{" "}
 				<a
 					target="_blank"
 					rel="noopener noreferrer"
-					href="https://www.twitter.com/blackjackkent"
+					href="https://www.blackjack-software.com"
 					className="text-secondaryLight hover:text-white"
 				>
 					Blackjack Software
