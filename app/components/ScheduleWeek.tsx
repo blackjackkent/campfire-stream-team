@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ScheduleDay from "./ScheduleDay";
-import ScheduleControls from "./ScheduleControls";
 import type { Schedule } from "~/lib/types";
 import { Pagination } from "swiper";
 

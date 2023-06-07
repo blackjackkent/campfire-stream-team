@@ -1,13 +1,7 @@
-import type { LoaderArgs, V2_MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import {
-	fetchCurrentlyLiveStreamers,
-	fetchSchedule,
-	fetchTodaysStreams,
-} from "~/lib/streamers.server";
+import { fetchSchedule } from "~/lib/streamers.server";
 import { json } from "@remix-run/node";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import ScheduleDay from "~/components/ScheduleDay";
 import ScheduleWeek from "~/components/ScheduleWeek";
 
 export const meta: V2_MetaFunction = () => {
@@ -21,7 +15,7 @@ export const meta: V2_MetaFunction = () => {
 	];
 };
 
-export async function loader({ request }: LoaderArgs) {
+export async function loader() {
 	return json({
 		schedule: fetchSchedule(),
 	});

@@ -1,12 +1,7 @@
-import type { LoaderArgs, V2_MetaFunction } from "@remix-run/node";
+import type { V2_MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import {
-	fetchCurrentlyLiveStreamers,
-	fetchTodaysStreams,
-} from "~/lib/streamers.server";
+import { fetchCurrentlyLiveStreamers } from "~/lib/streamers.server";
 import { json } from "@remix-run/node";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import ScheduleDay from "~/components/ScheduleDay";
 import { useEffect } from "react";
 
 export const meta: V2_MetaFunction = () => {
