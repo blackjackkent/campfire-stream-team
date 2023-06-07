@@ -10,12 +10,8 @@ type ScheduleWeekProps = {
 };
 
 const ScheduleWeek = ({ schedule }: ScheduleWeekProps) => {
-	const [currentSlide, setCurrentSlide] = useState(new Date().getDay());
-	const updateCurrentSlide = (index: number) => {
-		if (currentSlide !== index) {
-			setCurrentSlide(index);
-		}
-	};
+	const currentDayId = new Date().getDay();
+	console.log(currentDayId);
 	const pagination = {
 		clickable: true,
 		el: ".pagination",
@@ -51,8 +47,7 @@ const ScheduleWeek = ({ schedule }: ScheduleWeekProps) => {
 								slidesPerView={1}
 								pagination={pagination}
 								modules={[Pagination]}
-								onSlideChange={() => console.log("slide change")}
-								onSwiper={(swiper) => console.log(swiper)}
+								initialSlide={currentDayId}
 							>
 								<SwiperSlide>
 									<ScheduleDay dayId={0} streams={schedule[0]} />

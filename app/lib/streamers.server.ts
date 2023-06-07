@@ -69,5 +69,8 @@ export const fetchSchedule = () => {
 			});
 		});
 	});
+	for (let i = 0; i <= 6; i++) {
+		schedule[i] = schedule[i].sort(sortScheduleItems);
+	}
 	return schedule;
 };
