@@ -24,3 +24,6 @@ export const sortScheduleItems = (a: ScheduleItem, b: ScheduleItem) => {
 	}
 	return aStartHours - bStartHours;
 };
+
+export const shuffleArray = (array: any[]) =>
+	array.sort(() => Math.random() - 0.5);

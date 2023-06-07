@@ -13,7 +13,6 @@ import { FaInfoCircle, FaClock, FaUsers, FaEnvelope } from "react-icons/fa";
 import NavigationLink from "./components/NavigationLink";
 import Header from "./components/Header";
 import CampfireLogo from "./images/campfire-logo.png";
-import HeaderBackground from "./images/header-bg.jpg";
 import Footer from "./components/Footer";
 
 export const links: LinksFunction = () => [

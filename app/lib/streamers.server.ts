@@ -74,3 +74,7 @@ export const fetchSchedule = () => {
 	}
 	return schedule;
 };
+
+export const fetchStreamers = (): Streamer[] => {
+	return data;
+};
