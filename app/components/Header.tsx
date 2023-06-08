@@ -1,25 +1,21 @@
-import { FaTwitterSquare } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
 	return (
-		<header className="w-[960px] mx-auto">
+		<header className="px-4 lg:px-0 lg:w-[960px] mx-auto">
 			<div className="flex flex-row justify-between items-center px-2 pt-8">
 				<h1>
-					<a className="font-bold text-secondary text-4xl" href="/">
+					<a className="font-bold text-secondary text-2xl md:text-4xl" href="/">
 						Campfire Stream Team
 					</a>
 				</h1>
-				<a
-					href="http://www.twitter.com/CampfireStream"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="flex flex-row items-center p-3 border-solid border-2 border-primary text-primary rounded-full"
+				<div className="h-5 bg-secondary mx-5 flex-1"></div>
+				<button
+					type="button"
+					className="bg-white text-secondary block lg:hidden"
 				>
-					<FaTwitterSquare className="mr-1" />
-					<span className="text-sm uppercase font-medium">
-						Follow us on Twitter!
-					</span>
-				</a>
+					<FaBars />
+				</button>
 			</div>
 		</header>
 	);

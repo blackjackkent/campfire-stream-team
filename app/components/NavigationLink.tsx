@@ -8,7 +8,7 @@ type CustomLinkProps = {
 };
 const NavigationLink: React.FC<CustomLinkProps> = ({ Icon, text, to }) => {
 	const activeClasses = "border-b-4 border-b-primary border-b-solid";
-	const baseClasses = "hover:text-primary block mt-12";
+	const baseClasses = "hover:text-primary hidden lg:block lg:mt-12";
 	return (
 		<NavLink
 			to={to}

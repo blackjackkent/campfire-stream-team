@@ -8,12 +8,9 @@ import {
 	Scripts,
 	ScrollRestoration,
 } from "@remix-run/react";
-import { useState } from "react";
-import { FaInfoCircle, FaClock, FaUsers, FaEnvelope } from "react-icons/fa";
-import NavigationLink from "./components/NavigationLink";
 import Header from "./components/Header";
-import CampfireLogo from "./images/campfire-logo.png";
 import Footer from "./components/Footer";
+import Menu from "./components/Menu";
 
 export const links: LinksFunction = () => [
 	{ rel: "preconnect", href: "" },
@@ -45,41 +42,10 @@ export default function App() {
 			<body className="min-h-screen flex flex-col w-full font-raleway">
 				<div className="flex-1">
 					<Header />
-					<nav className="w-[960px] mx-auto">
-						<ul className="flex items-start justify-between mb-8 text-gray-600 font-medium text-lg">
-							<li>
-								<NavigationLink to="/" Icon={FaInfoCircle} text="About Us" />
-							</li>
-							<li>
-								<NavigationLink
-									to="/schedule"
-									Icon={FaClock}
-									text="Team Schedule"
-								/>
-							</li>
-							<li>
-								<img src={CampfireLogo} alt="" className="w-64 -mt-12" />
-							</li>
-							<li>
-								<NavigationLink
-									to="/streamers"
-									Icon={FaUsers}
-									text="Streamers"
-								/>
-							</li>
-							<li>
-								<NavigationLink
-									to="/contact"
-									Icon={FaEnvelope}
-									text="Contact Us"
-								/>
-							</li>
-						</ul>
-					</nav>
-
-					<section className="bg-[url('/images/header-bg.jpg')] -mt-32 rounded-xl bg-bottom bg-clip-border bg-cover">
-						<div className="py-24">
-							<div className="bg-red-500 p-8 w-[960px] mx-auto text-white text-center rounded-xl bg-gradient-to-r from-primary to-secondary shadow-xl">
+					<Menu />
+					<section className="lg:bg-[url('/images/header-bg.jpg')] lg:-mt-32 lg:rounded-xl bg-bottom bg-clip-border bg-cover">
+						<div className="lg:py-24">
+							<div className="bg-red-500 p-8 lg:w-[960px] mx-auto text-white text-center lg:rounded-xl bg-gradient-to-r from-primary to-secondary shadow-xl">
 								<h1 className="uppercase text-5xl font-black mb-4">
 									Take a seat at the campfire!
 								</h1>
@@ -91,7 +57,7 @@ export default function App() {
 							</div>
 						</div>
 					</section>
-					<div className="w-[960px] mx-auto">
+					<div className="lg:w-[960px] mx-auto px-8 lg:p-0">
 						<Outlet />
 						<ScrollRestoration />
 						<Scripts />

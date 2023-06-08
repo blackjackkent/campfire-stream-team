@@ -10,8 +10,12 @@ import ScheduleDay from "~/components/ScheduleDay";
 
 export const meta: V2_MetaFunction = () => {
 	return [
-		{ title: "New Remix App" },
-		{ name: "description", content: "Welcome to Remix!" },
+		{ title: "Campfire Stream Team" },
+		{
+			name: "description",
+			content:
+				"The Campfire is a community of Twitch streamers who believe in creating an inclusive, diverse, and uplifting space for our audience, our teammates, and our fellow streamers.",
+		},
 	];
 };
 
@@ -45,8 +49,22 @@ export default function Index() {
 	}
 	return (
 		<>
-			<div className="flex">
-				<div className="flex-1 pr-12 py-10 text-slate-800">
+			<div className="block lg:flex lg:flex-row-reverse">
+				<div className="border-solid border border-secondary float-right lg:float-none lg:flex-none w-1/3 lg:w-1/4 my-10 p-5 ml-5 mb-5">
+					<h3 className="text-2xl text-secondary font-bold text-center mb-4">
+						Currently Live
+					</h3>
+					<hr className="mb-4" />
+					{liveStreamers && liveStreamers.length > 0 && (
+						<div>{streamerDisplay}</div>
+					)}
+					{!liveStreamers?.length && (
+						<p className="text-center">
+							No Campfire streamers are currently live! Please check back soon.
+						</p>
+					)}
+				</div>
+				<div className="lg:flex-1 pr-12 py-10 text-slate-800">
 					<h2 className="text-4xl font-bold mb-4">Let Us Entertain You!</h2>
 					<p className="my-4 text-lg">
 						Around the Campfire you'll find a team of diverse streamers, their
@@ -66,20 +84,6 @@ export default function Index() {
 						Take a look around our website, follow us on Twitter, and drop by
 						one of our streams. Don't be afraid to say hello!
 					</p>
-				</div>
-				<div className="flex-none w-1/4 py-10">
-					<h3 className="text-2xl text-secondary font-bold text-center mb-4">
-						Currently Live
-					</h3>
-					<hr className="mb-4" />
-					{liveStreamers && liveStreamers.length > 0 && (
-						<div>{streamerDisplay}</div>
-					)}
-					{!liveStreamers?.length && (
-						<p>
-							No Campfire streamers are currently live! Please check back soon.
-						</p>
-					)}
 				</div>
 			</div>
 			<div>
