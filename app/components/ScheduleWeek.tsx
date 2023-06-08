@@ -9,7 +9,6 @@ type ScheduleWeekProps = {
 
 const ScheduleWeek = ({ schedule }: ScheduleWeekProps) => {
 	const currentDayId = new Date().getDay();
-	console.log(currentDayId);
 	const pagination = {
 		clickable: true,
 		el: ".pagination",

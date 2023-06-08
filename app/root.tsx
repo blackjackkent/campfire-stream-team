@@ -34,7 +34,6 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
-	const [isNavbarActive, setIsNavbarActive] = useState(false);
 	return (
 		<html lang="en">
 			<head>
@@ -43,66 +42,64 @@ export default function App() {
 				<Meta />
 				<Links />
 			</head>
-			<body>
-				<div className="mx-auto font-raleway">
-					<div>
-						<Header />
-						<nav className="w-[960px] mx-auto">
-							<ul className="flex items-start justify-between mb-8 text-gray-600 font-medium text-lg">
-								<li>
-									<NavigationLink to="/" Icon={FaInfoCircle} text="About Us" />
-								</li>
-								<li>
-									<NavigationLink
-										to="/schedule"
-										Icon={FaClock}
-										text="Team Schedule"
-									/>
-								</li>
-								<li>
-									<img src={CampfireLogo} alt="" className="w-64 -mt-12" />
-								</li>
-								<li>
-									<NavigationLink
-										to="/streamers"
-										Icon={FaUsers}
-										text="Streamers"
-									/>
-								</li>
-								<li>
-									<NavigationLink
-										to="/contact"
-										Icon={FaEnvelope}
-										text="Contact Us"
-									/>
-								</li>
-							</ul>
-						</nav>
+			<body className="min-h-screen flex flex-col w-full font-raleway">
+				<div className="flex-1">
+					<Header />
+					<nav className="w-[960px] mx-auto">
+						<ul className="flex items-start justify-between mb-8 text-gray-600 font-medium text-lg">
+							<li>
+								<NavigationLink to="/" Icon={FaInfoCircle} text="About Us" />
+							</li>
+							<li>
+								<NavigationLink
+									to="/schedule"
+									Icon={FaClock}
+									text="Team Schedule"
+								/>
+							</li>
+							<li>
+								<img src={CampfireLogo} alt="" className="w-64 -mt-12" />
+							</li>
+							<li>
+								<NavigationLink
+									to="/streamers"
+									Icon={FaUsers}
+									text="Streamers"
+								/>
+							</li>
+							<li>
+								<NavigationLink
+									to="/contact"
+									Icon={FaEnvelope}
+									text="Contact Us"
+								/>
+							</li>
+						</ul>
+					</nav>
 
-						<section className="bg-[url('/images/header-bg.jpg')] -mt-32 rounded-xl bg-bottom bg-clip-border bg-cover">
-							<div className="py-24">
-								<div className="bg-red-500 p-8 w-[960px] mx-auto text-white text-center rounded-xl bg-gradient-to-r from-primary to-secondary shadow-xl">
-									<h1 className="uppercase text-5xl font-black mb-4">
-										Take a seat at the campfire!
-									</h1>
-									<p className="text-lg">
-										The Campfire is a community of Twitch streamers who believe
-										in creating an inclusive, diverse, and uplifting space for
-										our audience, our teammates, and our fellow streamers.
-									</p>
-								</div>
+					<section className="bg-[url('/images/header-bg.jpg')] -mt-32 rounded-xl bg-bottom bg-clip-border bg-cover">
+						<div className="py-24">
+							<div className="bg-red-500 p-8 w-[960px] mx-auto text-white text-center rounded-xl bg-gradient-to-r from-primary to-secondary shadow-xl">
+								<h1 className="uppercase text-5xl font-black mb-4">
+									Take a seat at the campfire!
+								</h1>
+								<p className="text-lg">
+									The Campfire is a community of Twitch streamers who believe in
+									creating an inclusive, diverse, and uplifting space for our
+									audience, our teammates, and our fellow streamers.
+								</p>
 							</div>
-						</section>
-						<div className="w-[960px] mx-auto">
-							<Outlet />
-							<ScrollRestoration />
-							<Scripts />
-							<LiveReload />
 						</div>
+					</section>
+					<div className="w-[960px] mx-auto">
+						<Outlet />
+						<ScrollRestoration />
+						<Scripts />
+						<LiveReload />
 					</div>
-
-					<Footer />
 				</div>
+
+				<Footer />
 			</body>
 		</html>
 	);

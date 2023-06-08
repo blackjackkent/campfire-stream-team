@@ -22,10 +22,6 @@ const StreamerListItem = ({ streamer, isLive }: StreamerListItemProps) => {
 		socials.discord = streamer.discord;
 	}
 	const imageSrc = `/images/streamers/${streamer.twitchHandle.toLowerCase()}.png`;
-	const fallbackImageSrc = CampfireLogo;
-	const onImageFallback = (e: SyntheticEvent<HTMLImageElement, Event>) => {
-		e.currentTarget.src = fallbackImageSrc;
-	};
 	const keys = Object.keys(socials);
 	const socialElements = keys.map((k) => ({
 		id: k,
@@ -35,6 +31,7 @@ const StreamerListItem = ({ streamer, isLive }: StreamerListItemProps) => {
 				key={`${k}-${socials[k]}`}
 				target="_blank"
 				rel="noopener noreferrer"
+				className="text-primary hover:text-primaryLight "
 			>
 				{k}
 			</a>
@@ -56,7 +53,6 @@ const StreamerListItem = ({ streamer, isLive }: StreamerListItemProps) => {
 				>
 					<img
 						src={imageSrc}
-						onError={onImageFallback}
 						alt={streamer.twitchHandle}
 						className="rounded-md"
 					/>
@@ -67,7 +63,7 @@ const StreamerListItem = ({ streamer, isLive }: StreamerListItemProps) => {
 							target="_blank"
 							rel="noopener noreferrer"
 							href={`http://www.twitch.tv/${streamer.twitchHandle}`}
-							className="relative m-3 py-1 px-2 bg-opacity-70 bg-black z-20 rounded-md flex items-center"
+							className="relative m-2 py-1 px-1 bg-opacity-70 bg-black z-20 rounded-md flex items-center text-xs"
 						>
 							Live Now <FaExternalLinkAlt className="ml-2 inline" />
 						</a>
@@ -75,17 +71,20 @@ const StreamerListItem = ({ streamer, isLive }: StreamerListItemProps) => {
 				)}
 			</div>
 			<div>
-				<h4>
+				<h4 className="text-center">
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
 						href={`http://www.twitch.tv/${streamer.twitchHandle}`}
+						className="font-bold text-xl text-secondary hover:text-secondaryLight"
 					>
 						{streamer.twitchHandle}
 					</a>
 				</h4>
-				<p>( {socialElementsWithDividers} )</p>
-				<p>{streamer.bio || "Channel info coming soon!"}</p>
+				<p className="mb-4 py-1 bg-secondary text-white text-center text-lg">
+					( {socialElementsWithDividers} )
+				</p>
+				<p className="text-lg">{streamer.bio || "Channel info coming soon!"}</p>
 			</div>
 			<div className="clear-both" />
 		</div>
