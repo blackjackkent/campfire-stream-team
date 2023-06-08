@@ -23,8 +23,8 @@ const Contact = () => {
 							</h2>
 						</div>
 					</div>
-					<div className="flex flex-row">
-						<div className="w-1/2 text-lg pr-8">
+					<div className="flex flex-col lg:flex-row mb-2">
+						<div className="w-full lg:w-1/2 text-lg pr-8 mb-4">
 							<p>
 								The Campfire Stream Team is open to partnership and
 								collaboration with anyone in the digital media space - as a
@@ -32,7 +32,7 @@ const Contact = () => {
 								idea or just want to get in touch? Reach out and let us know!
 							</p>
 						</div>
-						<div className="w-1/2">
+						<div className="w-full lg:w-1/2">
 							<a
 								className="w-full px-8 py-6 bg-secondary hover:bg-primary mb-4 flex items-center rounded-md text-white"
 								href="mailto:campfirestreamteam@gmail.com"

@@ -44,8 +44,8 @@ const StreamerListItem = ({ streamer, isLive }: StreamerListItemProps) => {
 		</React.Fragment>
 	));
 	return (
-		<div className="bg-slate-200 border-1 border-solid rounded-md mb-5 p-1">
-			<div className="float-left m-5 relative w-52 h-52">
+		<div className="bg-slate-200 border-1 border-solid rounded-md mb-5 p-4 justify">
+			<div className="float-left m-5 relative w-40 lg:w-52 h-40 lg:h-52">
 				<a
 					target="_blank"
 					rel="noopener noreferrer"

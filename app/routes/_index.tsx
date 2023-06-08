@@ -50,7 +50,7 @@ export default function Index() {
 	return (
 		<>
 			<div className="block lg:flex lg:flex-row-reverse">
-				<div className="border-solid border border-secondary float-right lg:float-none lg:flex-none w-1/3 lg:w-1/4 my-10 p-5 ml-5 mb-5">
+				<div className="border-solid border border-secondary float-right lg:float-none lg:flex-none w-1/2 lg:w-1/4 my-10 p-5 ml-5 mb-5">
 					<h3 className="text-2xl text-secondary font-bold text-center mb-4">
 						Currently Live
 					</h3>
@@ -65,7 +65,7 @@ export default function Index() {
 					)}
 				</div>
 				<div className="lg:flex-1 pr-12 py-10 text-slate-800">
-					<h2 className="text-4xl font-bold mb-4">Let Us Entertain You!</h2>
+					<h2 className="text-3xl font-bold mb-4">Let Us Entertain You!</h2>
 					<p className="my-4 text-lg">
 						Around the Campfire you'll find a team of diverse streamers, their
 						supporters, and their communities, dedicated to supporting one
