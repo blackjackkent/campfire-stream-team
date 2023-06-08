@@ -11,6 +11,8 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
+import MobileMenu from "./components/MobileMenu";
+import { useState } from "react";
 
 export const links: LinksFunction = () => [
 	{ rel: "preconnect", href: "" },
@@ -31,6 +33,10 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+	const [isMobileMenuVisible, setIsMobileMenuVisible] = useState(false);
+	const onMenuToggle = () => {
+		setIsMobileMenuVisible(!isMobileMenuVisible);
+	};
 	return (
 		<html lang="en">
 			<head>
@@ -41,8 +47,9 @@ export default function App() {
 			</head>
 			<body className="min-h-screen flex flex-col w-full font-raleway">
 				<div className="flex-1">
-					<Header />
+					<Header onMenuToggle={onMenuToggle} />
 					<Menu />
+					<MobileMenu isVisible={isMobileMenuVisible} onToggle={onMenuToggle} />
 					<section className="lg:bg-[url('/images/header-bg.jpg')] lg:-mt-32 lg:rounded-xl bg-bottom bg-clip-border bg-cover">
 						<div className="lg:py-24">
 							<div className="bg-red-500 p-8 lg:w-[960px] mx-auto text-white text-center lg:rounded-xl bg-gradient-to-r from-primary to-secondary shadow-xl">

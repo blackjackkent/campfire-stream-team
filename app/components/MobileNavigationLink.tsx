@@ -1,20 +1,28 @@
 import { NavLink } from "@remix-run/react";
 import type { IconType } from "react-icons";
 
-type NavigationLinkProps = {
+type MobileNavigationLinkProps = {
 	Icon: IconType;
 	to: string;
 	text: string;
+	onClick: () => void;
 };
-const NavigationLink: React.FC<NavigationLinkProps> = ({ Icon, text, to }) => {
+const MobileNavigationLink: React.FC<MobileNavigationLinkProps> = ({
+	Icon,
+	text,
+	to,
+	onClick,
+}) => {
 	const activeClasses = "border-b-4 border-b-primary border-b-solid";
-	const baseClasses = "hover:text-primary hidden lg:block lg:mt-12";
+	const baseClasses =
+		"bg-secondary block width-full mb-4 p-4 rounded-md text-white";
 	return (
 		<NavLink
 			to={to}
 			className={({ isActive }) =>
 				isActive ? `${activeClasses} ${baseClasses}` : baseClasses
 			}
+			onClick={onClick}
 		>
 			<span className="flex items-center">
 				<Icon className="mr-2" />
@@ -23,4 +31,4 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({ Icon, text, to }) => {
 		</NavLink>
 	);
 };
-export default NavigationLink;
+export default MobileNavigationLink;

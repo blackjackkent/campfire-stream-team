@@ -1,6 +1,9 @@
 import { FaBars } from "react-icons/fa";
 
-const Header = () => {
+type HeaderProps = {
+	onMenuToggle: () => void;
+};
+const Header = ({ onMenuToggle }: HeaderProps) => {
 	return (
 		<header className="px-4 lg:px-0 lg:w-[960px] mx-auto">
 			<div className="flex flex-row justify-between items-center px-2 pt-8">
@@ -13,6 +16,7 @@ const Header = () => {
 				<button
 					type="button"
 					className="bg-white text-secondary block lg:hidden"
+					onClick={onMenuToggle}
 				>
 					<FaBars />
 				</button>
