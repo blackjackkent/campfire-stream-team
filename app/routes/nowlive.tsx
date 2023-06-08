@@ -23,21 +23,20 @@ export async function loader() {
 
 const NowLive = () => {
 	const { liveStreamers } = useLoaderData<typeof loader>();
+	const areAnyStreamersLive = liveStreamers && liveStreamers.length > 0;
 	useEffect(() => {
 		let mtLink = null;
-		if (liveStreamers && liveStreamers.length > 1) {
+		if (areAnyStreamersLive) {
 			mtLink = `https://multitwitch.tv/${liveStreamers.join("/")}`;
 			window.location.href = mtLink;
 		}
-	});
+	}, [areAnyStreamersLive, liveStreamers]);
 
 	return (
 		<>
 			<section className="text-center">
-				{liveStreamers && liveStreamers.length > 0 && (
-					<p>Redirecting - please wait...</p>
-				)}
-				{(!liveStreamers || !liveStreamers.length) && (
+				{areAnyStreamersLive && <p>Redirecting - please wait...</p>}
+				{!areAnyStreamersLive && (
 					<p>
 						No Campfire streamers are currently live! Please check back later!
 					</p>
