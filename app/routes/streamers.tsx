@@ -53,7 +53,7 @@ const Schedule = () => {
 	return (
 		<>
 			<section>
-				<div className="container">
+				<div>
 					<div>
 						<div>
 							<h2 className="my-8 text-4xl font-bold text-center">

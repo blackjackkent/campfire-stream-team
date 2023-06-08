@@ -2,13 +2,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ScheduleDay from "./ScheduleDay";
 import type { Schedule } from "~/lib/types";
 import { Pagination } from "swiper";
+import { useEffect, useMemo } from "react";
 
 type ScheduleWeekProps = {
 	schedule: Schedule;
 };
 
 const ScheduleWeek = ({ schedule }: ScheduleWeekProps) => {
-	const currentDayId = new Date().getDay();
+	const currentDayId = useMemo(() => new Date().getDay(), []);
 	const pagination = {
 		clickable: true,
 		el: ".pagination",
@@ -29,15 +30,22 @@ const ScheduleWeek = ({ schedule }: ScheduleWeekProps) => {
 				</span>`;
 		},
 	};
+	useEffect(() => {
+		document.querySelector(".pagination .bg-secondary")?.scrollIntoView({
+			behavior: "auto",
+			block: "center",
+			inline: "center",
+		});
+	}, []);
 	return (
 		<>
-			<div className="container mx-auto ">
+			<div className="container mx-auto">
 				<div>
 					<h2 className="text-center font-bold text-4xl mt-8">Team Schedule</h2>
 				</div>
 				<div>
 					<div>
-						<div className="pagination text-center mt-4 border-b border-b-solid border-b-slate-200 mb-4 flex items-center justify-between" />
+						<div className="pagination overflow-x-auto text-center mt-4 border-b border-b-solid border-b-slate-200 mb-4 flex items-center justify-between" />
 						<div>
 							<Swiper
 								autoHeight={true}
