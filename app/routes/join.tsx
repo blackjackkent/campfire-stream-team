@@ -25,39 +25,44 @@ const Contact = () => {
 					</div>
 					<div>
 						<p className="mb-4">
-							Gather 'round adventurers and kindred spirits! Campfire's blazing
-							and we're searching for passionate streamers to join our vibrant
-							community.
-						</p>
-						<p className="mb-4">
-							Forget solo grinding, lurker life, and stream teams that are
-							nothing more than follow for follow farms. Here at Campfire, we're
-							all about sharing the warmth, lifting each other up, and blazing a
-							trail in the streaming wilderness together.
+							Campfire is a community who welcomes streamers of all sizes from
+							small streamers to Affiliates to Partners who have audiences and
+							experiences of all levels. What matters to us is your passion,
+							creativity, and desire to expand your knowledge, and broaden your
+							circles.
 						</p>
 						<div className="px-8">
-							<h3 className="my-4 text-xl font-bold">
-								What awaits you at Campfire?
-							</h3>
-							<ul className="mb-4 ml-4 border-l-8 pl-2 border-secondary">
+							<h3 className="my-4 text-xl font-bold">Who we're looking for:</h3>
+							<ul className="mb-4 ml-4 border-l-8 pl-6 border-secondary list-disc">
+								<li>Streamers who are 21 and older</li>
+								<li>Creators who are passionate about streaming</li>
 								<li>
-									<span className="font-semibold">Sharing the flame:</span>{" "}
-									Knowledge exchange is at the heart of Campfire. From growth
-									hacks to stream setup tips, we're all about lifting each other
-									up. Got questions? We've got answers (and probably some
-									hilarious anecdotes too).
+									Those who are committed to positivity, inclusivity, and want
+									to be in an active community that values connection,
+									participation, and the sharing of knowledge.
 								</li>
 								<li>
-									<span className="font-semibold">
-										Community nights under the stars.
-									</span>{" "}
-									Movie nights, game jams, co-op adventures – prepare for epic
+									People who want to actively participate in the Campfire
+									community by attending events, share knowledge, and celebrate
+									each others' achievements
+								</li>
+							</ul>
+						</div>
+						<div className="px-8">
+							<h3 className="my-4 text-xl font-bold">
+								What you can expect from Campfire?
+							</h3>
+							<ul className="mb-4 ml-4 border-l-8 pl-6 border-secondary list-disc">
+								<li>
+									From one-on-one guidance, to stream setup tips, we're all
+									about lifting each other up. Got questions? We've got answers
+									(and probably some hilarious anecdotes too).
+								</li>
+								<li>
+									Movie nights, game jams, co-op adventures - prepare for epic
 									laughter, memories, and hype trains.
 								</li>
 								<li>
-									<span className="font-bold">
-										Mutual support that's actually mutual:
-									</span>{" "}
 									We cheer you on, raid your streams, and lend a helping hand
 									whenever needed. This community has your back, no matter the
 									challenge.
@@ -66,33 +71,31 @@ const Contact = () => {
 						</div>
 						<div className="px-8">
 							<h3 className="my-4 text-xl font-bold">
-								Before you join the campfire, remember our values:
+								What we expect from you:
 							</h3>
-							<ul className="mb-4 ml-4 border-l-8 pl-2 border-secondary">
+							<ul className="mb-4 ml-4 border-l-8 pl-6 border-secondary list-disc">
+								<li>Be over 21</li>
 								<li>
-									<span className="font-semibold">
-										Inclusivity is our anthem.
-									</span>{" "}
-									We celebrate diversity and strictly prohibit any bigotry, hate
-									speech, harassment, abusive behavior, or toxicity.{" "}
+									Represent Campfire’s values of inclusivity, respect, and
+									participation
 								</li>
 								<li>
-									<span className="font-semibold">
-										Be an active torchbearer.
-									</span>{" "}
-									Contribute to the warmth by attending events, sharing
-									knowledge, and celebrating your fellow adventurers' victories.
+									Join and be an active participant in the Campfire discord
 								</li>
+								<li>Stream a minimum of one time a week. </li>
+								<li>
+									Add the Campfire stream team panel to your twitch panels
+								</li>
+								<li>
+									Visit and participate in the streams of other Campfire
+									streamers
+								</li>
+								<li>Raid other Campfire streamers</li>
 							</ul>
 						</div>
 					</div>
 					<p className="mb-4">
-						All adventurers aged 21 and over are welcome, regardless of audience
-						size or experience. Your passion, dedication, and willingness to be
-						part of something bigger are all that matter. Campfire recruitment
-						starts January 15th! Fill out our application and get ready to share
-						the flame, build friendships, and blaze a trail with us. Together,
-						we'll turn up the heat and light up the streaming world!
+						If you feel like you would be a great fit for Campfire, apply below!
 					</p>
 					<a
 						target="_blank"
