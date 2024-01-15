@@ -2,6 +2,7 @@ import {
 	FaClock,
 	FaEnvelope,
 	FaInfoCircle,
+	FaUserPlus,
 	FaUsers,
 	FaWindowClose,
 } from "react-icons/fa";
@@ -31,7 +32,7 @@ const MobileMenu = ({ isVisible, onToggle }: MobileMenuProps) => {
 				onClick={onToggle}
 				to="/"
 				Icon={FaInfoCircle}
-				text="About Us"
+				text="Home"
 			/>
 
 			<MobileNavigationLink
@@ -53,6 +54,13 @@ const MobileMenu = ({ isVisible, onToggle }: MobileMenuProps) => {
 				to="/contact"
 				Icon={FaEnvelope}
 				text="Contact Us"
+			/>
+
+			<MobileNavigationLink
+				onClick={onToggle}
+				to="/join"
+				Icon={FaUserPlus}
+				text="Join the Team"
 			/>
 		</div>
 	);
