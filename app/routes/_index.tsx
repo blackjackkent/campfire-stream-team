@@ -2,11 +2,13 @@ import type { LoaderArgs, V2_MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import {
 	fetchCurrentlyLiveStreamers,
-	fetchTodaysStreams,
+	fetchSchedule,
 } from "~/lib/streamers.server";
 import { json } from "@remix-run/node";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import ScheduleDay from "~/components/ScheduleDay";
+import { useMemo } from "react";
+import { sortScheduleItems } from "~/lib/utils";
 
 export const meta: V2_MetaFunction = () => {
 	return [
@@ -20,18 +22,16 @@ export const meta: V2_MetaFunction = () => {
 };
 
 export async function loader({ request }: LoaderArgs) {
-	const today = new Date();
-	const todayDayId = today.getDay();
 	return json({
 		liveStreamers: await fetchCurrentlyLiveStreamers(),
-		todaysStreams: fetchTodaysStreams(todayDayId),
-		todayDayId,
+		scheduleItems: fetchSchedule(),
 	});
 }
 
 export default function Index() {
-	const { liveStreamers, todaysStreams, todayDayId } =
-		useLoaderData<typeof loader>();
+	const { liveStreamers, scheduleItems } = useLoaderData<typeof loader>();
+	const today = new Date();
+	const todayDayId = today.getDay();
 	let streamerDisplay: JSX.Element[] = [];
 	if (liveStreamers) {
 		streamerDisplay = liveStreamers.map((s) => (
@@ -47,6 +47,12 @@ export default function Index() {
 			</h4>
 		));
 	}
+	const todaysStreams = useMemo(() => {
+		return scheduleItems
+			.filter((s) => new Date(s.stream.seedDate).getDay() === todayDayId)
+			.sort(sortScheduleItems);
+	}, [scheduleItems, todayDayId]);
+
 	return (
 		<>
 			<div className="block lg:flex lg:flex-row-reverse">

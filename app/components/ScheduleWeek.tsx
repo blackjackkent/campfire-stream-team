@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import ScheduleDay from "./ScheduleDay";
 import type { Schedule, ScheduleItem } from "~/lib/types";
 import { Pagination } from "swiper";
-import { useCallback, useEffect, useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { sortScheduleItems } from "~/lib/utils";
 
 type ScheduleWeekProps = {

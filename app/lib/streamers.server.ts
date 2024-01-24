@@ -1,8 +1,7 @@
 import streamData from "./streamerData.json";
 import { ApiClient } from "twitch";
 import { ClientCredentialsAuthProvider } from "twitch-auth";
-import type { Schedule, ScheduleItem, Streamer } from "./types";
-import { sortScheduleItems } from "./utils";
+import type { ScheduleItem, Streamer } from "./types";
 
 const clientId = process.env.TWITCH_CLIENT_ID || "";
 const clientSecret = process.env.TWITCH_CLIENT_SECRET || "";
@@ -30,23 +29,6 @@ export const fetchCurrentlyLiveStreamers = async () => {
 		console.error(e);
 		return null;
 	}
-};
-
-export const fetchTodaysStreams = (dayId: number) => {
-	const todaysStreams: ScheduleItem[] = [];
-	data.forEach((s) => {
-		const todaysStreamForStreamer = s.streams?.find((stream) => {
-			const localDate = new Date(stream.seedDate);
-			return localDate.getDay() === dayId;
-		});
-		if (todaysStreamForStreamer) {
-			todaysStreams.push({
-				twitchHandle: s.twitchHandle,
-				stream: todaysStreamForStreamer,
-			});
-		}
-	});
-	return todaysStreams.sort(sortScheduleItems);
 };
 
 export const fetchSchedule = () => {
