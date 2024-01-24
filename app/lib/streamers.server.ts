@@ -50,29 +50,15 @@ export const fetchTodaysStreams = (dayId: number) => {
 };
 
 export const fetchSchedule = () => {
-	const schedule: Schedule = {
-		0: [],
-		1: [],
-		2: [],
-		3: [],
-		4: [],
-		5: [],
-		6: [],
-	};
+	const schedule: ScheduleItem[] = [];
 	data.forEach((s) => {
 		s.streams?.forEach((stream) => {
-			const localDate = new Date(stream.seedDate + "Z");
-			console.log(localDate);
-			const dayId = localDate.getDay();
-			schedule[dayId].push({
+			schedule.push({
 				twitchHandle: s.twitchHandle,
 				stream,
 			});
 		});
 	});
-	for (let i = 0; i <= 6; i++) {
-		schedule[i] = schedule[i].sort(sortScheduleItems);
-	}
 	return schedule;
 };
 

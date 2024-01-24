@@ -1,15 +1,38 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import ScheduleDay from "./ScheduleDay";
-import type { Schedule } from "~/lib/types";
+import type { Schedule, ScheduleItem } from "~/lib/types";
 import { Pagination } from "swiper";
-import { useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo } from "react";
+import { sortScheduleItems } from "~/lib/utils";
 
 type ScheduleWeekProps = {
-	schedule: Schedule;
+	scheduleItems: ScheduleItem[];
 };
 
-const ScheduleWeek = ({ schedule }: ScheduleWeekProps) => {
+const ScheduleWeek = ({ scheduleItems }: ScheduleWeekProps) => {
 	const currentDayId = useMemo(() => new Date().getDay(), []);
+	const schedule = useMemo(() => {
+		const schedule: Schedule = {
+			0: [],
+			1: [],
+			2: [],
+			3: [],
+			4: [],
+			5: [],
+			6: [],
+		};
+		scheduleItems.forEach((s) => {
+			const localDate = new Date(s.stream.seedDate + "Z");
+			const dayId = localDate.getDay();
+			schedule[dayId].push(s);
+		});
+
+		for (let i = 0; i <= 6; i++) {
+			schedule[i] = schedule[i].sort(sortScheduleItems);
+		}
+		return schedule;
+	}, [scheduleItems]);
+
 	const pagination = {
 		clickable: true,
 		el: ".pagination",

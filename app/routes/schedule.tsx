@@ -17,15 +17,15 @@ export const meta: V2_MetaFunction = () => {
 
 export async function loader() {
 	return json({
-		schedule: fetchSchedule(),
+		scheduleItems: fetchSchedule(),
 	});
 }
 
 const Schedule = () => {
-	const { schedule } = useLoaderData<typeof loader>();
+	const { scheduleItems } = useLoaderData<typeof loader>();
 	return (
 		<>
-			<ScheduleWeek schedule={schedule} />
+			<ScheduleWeek scheduleItems={scheduleItems} />
 		</>
 	);
 };
