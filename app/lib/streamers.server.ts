@@ -61,7 +61,8 @@ export const fetchSchedule = () => {
 	};
 	data.forEach((s) => {
 		s.streams?.forEach((stream) => {
-			const localDate = new Date(stream.seedDate);
+			const localDate = new Date(stream.seedDate + "Z");
+			console.log(localDate);
 			const dayId = localDate.getDay();
 			schedule[dayId].push({
 				twitchHandle: s.twitchHandle,
